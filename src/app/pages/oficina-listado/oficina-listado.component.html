@@ -1,0 +1,32 @@
+<h2 class="titulo">Listado de oficinas</h2>
+
+<table>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Calle</th>
+        <th scope="col">Numero</th>
+        <th scope="col">Codigo postal</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ofice of oficinas">
+            <td scope="col">{{ofice.codigo}}</td>
+            <td scope="col">{{ofice.ciudad}}</td>
+            <td scope="col">{{ofice.calle}}</td>
+            <td scope="col">{{ofice.numero}}</td>
+            <td scope="col">{{ofice.codigoPostal}}</td>
+            <td scope="col">{{ofice.telefono}}</td>
+            <td>
+                <a href="/oficina-modificacion"><button class="button-editar">
+                  Editar
+                </button></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<a href="/oficina-alta"><button>Agregar Oficina</button></a>

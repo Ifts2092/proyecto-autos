@@ -7,6 +7,9 @@ import { VehiculosComponent } from './pages/vehiculos/vehiculos.component';
 import { VehiculosEditComponent } from './pages/vehiculos-edit/vehiculos-edit.component';
 import { ExampleComponent } from './pages/example/example.component';
 import { LoginComponent } from './pages/login/login.component';
+import { OficinaComponent } from './pages/oficina/oficina.component';
+import { OficinaModificacionComponent } from './pages/oficina-modificacion/oficina-modificacion.component';
+import { OficinaListadoComponent } from './pages/oficina-listado/oficina-listado.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { LoginComponent } from './pages/login/login.component';
     VehiculosComponent,
     VehiculosEditComponent,
     ExampleComponent,
-    LoginComponent
+    LoginComponent,
+    OficinaComponent,
+    OficinaModificacionComponent,
+    OficinaListadoComponent
   ],
   imports: [
     BrowserModule,
