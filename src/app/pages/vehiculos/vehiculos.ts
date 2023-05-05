@@ -3,7 +3,7 @@ export const vehiculos: any[] = [
         codigo: 1,
         grupo: "A",
         marca: "Ford",
-        modelo: "Fiesya",
+        modelo: "Fiesta",
         ano: "2000"
     },
     {
