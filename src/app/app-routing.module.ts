@@ -7,6 +7,8 @@ import { VehiculosEditComponent } from './pages/vehiculos-edit/vehiculos-edit.co
 import { OficinaListadoComponent } from './pages/oficina-listado/oficina-listado.component';
 import { OficinaComponent } from './pages/oficina/oficina.component';
 import { OficinaModificacionComponent } from './pages/oficina-modificacion/oficina-modificacion.component';
+import { ClientesAltaComponent } from './pages/clientes-alta/clientes-alta.component';
+import { ClientesListadoComponent } from './pages/clientes-listado/clientes-listado.component';
 
 const routes: Routes = [
   { path: '', component: ExampleComponent },
@@ -15,7 +17,9 @@ const routes: Routes = [
   { path: 'nuevo-vehiculo', component: VehiculosEditComponent },
   { path: 'oficinas-listado', component: OficinaListadoComponent},
   { path: 'oficina-alta', component: OficinaComponent},
-  { path: 'oficina-modificacion', component: OficinaModificacionComponent}
+  { path: 'oficina-modificacion', component: OficinaModificacionComponent},
+  { path: 'clientes-alta', component: ClientesAltaComponent},
+  { path: 'clientes-listado', component: ClientesListadoComponent}
 
 ]
 

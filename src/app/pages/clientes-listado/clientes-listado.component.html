@@ -1,0 +1,35 @@
+<h2 class="titulo">Listado de Clientes</h2>
+
+<table>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">DNI</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">N° de Tarjeta</th>
+        <th scope="col">Acciones</th>
+    
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cliente of clientes">
+            <td scope="col">{{cliente.codigo}}</td>
+            <td scope="col">{{cliente.nombre}}</td>
+            <td scope="col">{{cliente.apellido}}</td>
+            <td scope="col">{{cliente.dni}}</td>
+            <td scope="col">{{cliente.direccion}}</td>
+            <td scope="col">{{cliente.telefono}}</td>
+            <td scope="col">{{cliente.tarjeta}}</td>
+            <td>
+                <a href="/clientes-modificacion"><button class="button-editar">
+                  Editar
+                </button></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<a href="/clientes-alta"><button>Agregar Cliente</button></a>
