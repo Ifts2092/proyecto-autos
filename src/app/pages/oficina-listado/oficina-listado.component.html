@@ -9,7 +9,7 @@
         <th scope="col">Numero</th>
         <th scope="col">Codigo postal</th>
         <th scope="col">Telefono</th>
-        <th scope="col">Acciones</th>
+        <th width="200" scope="col">Acciones</th>
       </tr>
     </thead>
     <tbody>
@@ -20,10 +20,13 @@
             <td scope="col">{{ofice.numero}}</td>
             <td scope="col">{{ofice.codigoPostal}}</td>
             <td scope="col">{{ofice.telefono}}</td>
-            <td>
+            <td class="acciones">
                 <a href="/oficina-modificacion"><button class="button-editar">
                   Editar
                 </button></a>
+                <div><button class="button-editar">
+                  Eliminar
+                </button></div>
             </td>
         </tr>
     </tbody>

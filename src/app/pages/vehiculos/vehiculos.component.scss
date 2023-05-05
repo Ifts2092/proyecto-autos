@@ -1,0 +1,18 @@
+.titulo{
+    text-align: center;
+}
+.button-editar{
+    margin-bottom: 0;
+    // width: 150px;
+    padding: 0;
+    color: black;
+    
+    padding:5px;
+}
+
+.acciones {
+    flex-flow: row;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}

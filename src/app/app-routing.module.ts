@@ -9,18 +9,21 @@ import { OficinaComponent } from './pages/oficina/oficina.component';
 import { OficinaModificacionComponent } from './pages/oficina-modificacion/oficina-modificacion.component';
 import { ClientesAltaComponent } from './pages/clientes-alta/clientes-alta.component';
 import { ClientesListadoComponent } from './pages/clientes-listado/clientes-listado.component';
+import { ReservasComponent } from './pages/reservas/reservas.component';
+import { ReservasEditComponent } from './pages/reservas-edit/reservas-edit.component';
 
 const routes: Routes = [
-  { path: '', component: ExampleComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'vehiculos', component: VehiculosComponent },
-  { path: 'nuevo-vehiculo', component: VehiculosEditComponent },
+  { path: '', component: LoginComponent },
+  { path: 'home', component: ExampleComponent },
+  { path: 'vehiculos-listado', component: VehiculosComponent },
+  { path: 'vehiculo-alta', component: VehiculosEditComponent },
   { path: 'oficinas-listado', component: OficinaListadoComponent},
   { path: 'oficina-alta', component: OficinaComponent},
   { path: 'oficina-modificacion', component: OficinaModificacionComponent},
   { path: 'clientes-alta', component: ClientesAltaComponent},
-  { path: 'clientes-listado', component: ClientesListadoComponent}
-
+  { path: 'clientes-listado', component: ClientesListadoComponent},
+  { path: 'reservas-listado', component: ReservasComponent},
+  { path: 'reserva-alta', component: ReservasEditComponent}
 ]
 
 @NgModule({

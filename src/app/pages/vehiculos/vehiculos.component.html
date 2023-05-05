@@ -1,5 +1,6 @@
+<h2 class="titulo">Listado de vehiculos</h2>
 
-<a href="/nuevo-vehiculo" role="button">Nuevo Vehiculo</a>
+
 <table>
     <thead>
       <tr>
@@ -8,27 +9,26 @@
         <th scope="col">Marca</th>
         <th scope="col">Modelo</th>
         <th scope="col">Año</th>
-        <th scope="col">Accciones</th>
+        <th width="200" scope="col">Accciones</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>A</td>
-        <td>Ford</td>
-        <td>Fiesta</td>
-        <td>2022</td>
-        <a href="/nuevo-vehiculo" role="button">Editar</a>
-      </tr>
-      <tr>
-      <tr>
-        <th scope="row">1</th>
-        <td>B</td>
-        <td>Chevrolet</td>
-        <td>C</td>
-        <td>2020</td>
-        <a href="/nuevo-vehiculo" role="button">Editar</a>
-      </tr>
+
+      <tr *ngFor="let vehiculo of vehiculos">
+        <td scope="col">{{vehiculo.codigo}}</td>
+        <td scope="col">{{vehiculo.grupo}}</td>
+        <td scope="col">{{vehiculo.marca}}</td>
+        <td scope="col">{{vehiculo.modelo}}</td>
+        <td scope="col">{{vehiculo.ano}}</td>
+        <td class="acciones">
+          <a href="/vehiculo-alta"><button class="button-editar">
+            Editar
+          </button></a>
+          <div><button class="button-editar">
+            Eliminar
+          </button></div>
+      </td>
+      </tr>      
     </tbody>
     <tfoot>
       <tr>
@@ -41,3 +41,6 @@
       </tr>
     </tfoot>
   </table>
+
+
+<a href="/vehiculo-alta "><button>Agregar Vehiculo</button></a>

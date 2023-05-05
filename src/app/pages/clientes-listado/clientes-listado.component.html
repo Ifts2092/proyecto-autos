@@ -10,7 +10,7 @@
         <th scope="col">Dirección</th>
         <th scope="col">Telefono</th>
         <th scope="col">N° de Tarjeta</th>
-        <th scope="col">Acciones</th>
+        <th width="200" scope="col">Acciones</th>
     
       </tr>
     </thead>
@@ -23,11 +23,14 @@
             <td scope="col">{{cliente.direccion}}</td>
             <td scope="col">{{cliente.telefono}}</td>
             <td scope="col">{{cliente.tarjeta}}</td>
-            <td>
-                <a href="/clientes-modificacion"><button class="button-editar">
-                  Editar
-                </button></a>
-            </td>
+            <td class="acciones">
+              <a href="/clientes-alta"><button class="button-editar">
+                Editar
+              </button></a>
+              <div><button class="button-editar">
+                Eliminar
+              </button></div>
+          </td>
         </tr>
     </tbody>
 </table>

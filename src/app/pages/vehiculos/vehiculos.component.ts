@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { vehiculos } from './vehiculos';
 
 @Component({
   selector: 'app-vehiculos',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./vehiculos.component.scss']
 })
 export class VehiculosComponent {
-
+  vehiculos: any[] = vehiculos
 }

@@ -12,6 +12,8 @@ import { OficinaModificacionComponent } from './pages/oficina-modificacion/ofici
 import { OficinaListadoComponent } from './pages/oficina-listado/oficina-listado.component';
 import { ClientesAltaComponent } from './pages/clientes-alta/clientes-alta.component';
 import { ClientesListadoComponent } from './pages/clientes-listado/clientes-listado.component';
+import { ReservasComponent } from './pages/reservas/reservas.component';
+import { ReservasEditComponent } from './pages/reservas-edit/reservas-edit.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ClientesListadoComponent } from './pages/clientes-listado/clientes-list
     OficinaModificacionComponent,
     OficinaListadoComponent,
     ClientesAltaComponent,
-    ClientesListadoComponent
+    ClientesListadoComponent,
+    ReservasComponent,
+    ReservasEditComponent
   ],
   imports: [
     BrowserModule,

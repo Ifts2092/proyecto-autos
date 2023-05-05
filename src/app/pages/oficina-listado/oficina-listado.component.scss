@@ -6,4 +6,13 @@
     // width: 150px;
     padding: 0;
     color: black;
+    
+    padding:5px;
+}
+
+.acciones {
+    flex-flow: row;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
