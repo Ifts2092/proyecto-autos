@@ -5,7 +5,7 @@ import { ExampleComponent } from './pages/example/example.component';
 import { LoginComponent } from './pages/login/login.component';
 import { VehiculosEditComponent } from './pages/vehiculos-edit/vehiculos-edit.component';
 import { OficinaListadoComponent } from './pages/oficina-listado/oficina-listado.component';
-import { OficinaComponent } from './pages/oficina/oficina.component';
+import { OficinaComponent } from './pages/oficina-alta/oficina.component';
 import { OficinaModificacionComponent } from './pages/oficina-modificacion/oficina-modificacion.component';
 import { ClientesAltaComponent } from './pages/clientes-alta/clientes-alta.component';
 import { ClientesListadoComponent } from './pages/clientes-listado/clientes-listado.component';

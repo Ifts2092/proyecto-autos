@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { oficinas } from './oficinas';
+import { AgregarInfoService } from 'src/app/service/agregar-info.service';
 
 @Component({
   selector: 'app-oficina-listado',
@@ -8,5 +9,18 @@ import { oficinas } from './oficinas';
 })
 export class OficinaListadoComponent {
 
-  oficinas: any[] = oficinas
+  oficinas: any[];
+
+  constructor(private agregarService: AgregarInfoService){
+    this.oficinas = oficinas
+  }
+
+  ngOnInit(){
+
+    if(this.agregarService.getInfo() != undefined){
+      oficinas.push(this.agregarService.getInfo())
+    }
+
+  }
+
 }

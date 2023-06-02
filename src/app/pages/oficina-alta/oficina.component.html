@@ -1,0 +1,40 @@
+<h2 class="titulo">Oficina:</h2>
+
+<form>
+
+    <!-- Grid -->
+    <div class="grid">
+  
+      <!-- Markup example 1: input is inside label -->
+      <label for="firstname">
+        Ciudad de oficina: 
+        <input type="text" id="ciudadoficina" name="ciudadoficina" placeholder="Ciudad..." [(ngModel)]="oficina.ciudad" required>
+      </label>
+  
+      <label for="lastname">
+        Calle: 
+        <input type="text" id="calle" name="calle" placeholder="Calle..." [(ngModel)]="oficina.calle" required>
+      </label>
+
+      <label for="lastname">
+        Numero: 
+        <input type="text" id="numero" name="numero" placeholder="Numero..." [(ngModel)]="oficina.numero" required>
+      </label>
+
+      <label for="lastname">
+        Codigo postal: 
+        <input type="text" id="codigopostal" name="codigopostal" placeholder="Codigo postal..." [(ngModel)]="oficina.codigopostal" required>
+      </label>
+
+      <label for="lastname">
+        Telefono: 
+        <input type="text" id="telefono" name="telefono" placeholder="Telefono..." [(ngModel)]="oficina.telefono" required>
+      </label>
+  
+    </div>
+  
+    <!-- Button -->
+        <a href="/oficina-listado" (click)="agregarOficina()"><button>Guardar</button></a>
+
+  
+  </form>
