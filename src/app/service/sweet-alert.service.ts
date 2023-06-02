@@ -9,12 +9,20 @@ export class SweetAlertService {
 
   constructor() { }
 
-  creacionOficina(title:string,description: string,type:string){
+  sweetSuccess(title:string,description: string,type: any){
     Swal.fire(
-      'Good job!',
-      'You clicked the button!',
-      'success'
+      title,
+      description,
+      type
     )
+  }
+  
+  creacionOficina(title:string,description: string,type:string){
+    this.sweetSuccess(title,description,type);
+  }
+
+  editarOficina(title:string,description: string,type:string){
+    this.sweetSuccess(title,description,type);
   }
 
 }

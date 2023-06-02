@@ -13,7 +13,7 @@
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let ofice of oficinas">
+        <tr *ngFor="let ofice of oficinasListado">
             <td scope="col">{{ofice.codigo}}</td>
             <td scope="col">{{ofice.ciudad}}</td>
             <td scope="col">{{ofice.calle}}</td>
@@ -21,12 +21,14 @@
             <td scope="col">{{ofice.codigoPostal}}</td>
             <td scope="col">{{ofice.telefono}}</td>
             <td class="acciones">
-                <a href="/oficina-modificacion"><button class="button-editar">
+                <a href="/oficina-modificacion/ofice.id"><button class="button-editar">
                   Editar
                 </button></a>
-                <div><button class="button-editar">
+                <div>
+                  <button class="button-editar" (click)="eliminarOficina(ofice.codigo)">
                   Eliminar
-                </button></div>
+                </button>
+              </div>
             </td>
         </tr>
     </tbody>

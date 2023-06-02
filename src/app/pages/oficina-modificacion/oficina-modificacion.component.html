@@ -7,32 +7,32 @@
       <!-- Markup example 1: input is inside label -->
       <label for="firstname">
         Ciudad de oficina: 
-        <input type="text" id="ciudadoficina" name="ciudadoficina" placeholder="Caba" required>
+        <input type="text" id="ciudadoficina" name="ciudadoficina" placeholder="Caba" [(ngModel)]="oficina.ciudad" required>
       </label>
   
       <label for="lastname">
         Calle: 
-        <input type="text" id="calle" name="calle" placeholder="Av. San juan..." required>
+        <input type="text" id="calle" name="calle" placeholder="Av. San juan..." [(ngModel)]="oficina.calle" required>
       </label>
 
       <label for="lastname">
         Numero: 
-        <input type="text" id="numero" name="numero" placeholder="4112" required>
+        <input type="text" id="numero" name="numero" placeholder="4112" [(ngModel)]="oficina.numero" required>
       </label>
 
       <label for="lastname">
         Codigo postal: 
-        <input type="text" id="codigopostal" name="codigopostal" placeholder="1829" required>
+        <input type="text" id="codigopostal" name="codigopostal" placeholder="1829" [(ngModel)]="oficina.codigopostal" required>
       </label>
 
       <label for="lastname">
         Telefono: 
-        <input type="text" id="telefono" name="telefono" placeholder="41111222" required>
+        <input type="text" id="telefono" name="telefono" placeholder="41111222" [(ngModel)]="oficina.telefono" required>
       </label>
   
     </div>
   
     <!-- Button -->
-    <button type="submit">Guardar</button>
+    <button type="submit" (click)="editarInfo()">Guardar</button>
   
   </form>

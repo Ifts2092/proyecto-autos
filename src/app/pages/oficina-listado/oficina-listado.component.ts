@@ -9,10 +9,10 @@ import { AgregarInfoService } from 'src/app/service/agregar-info.service';
 })
 export class OficinaListadoComponent {
 
-  oficinas: any[];
+  oficinasListado: any[];
 
   constructor(private agregarService: AgregarInfoService){
-    this.oficinas = oficinas
+    this.oficinasListado = oficinas
   }
 
   ngOnInit(){
@@ -21,6 +21,11 @@ export class OficinaListadoComponent {
       oficinas.push(this.agregarService.getInfo())
     }
 
+  }
+
+  eliminarOficina(codigo: any){
+    // const oficina = this.oficinasListado.find(element => element.codigo === codigo);
+    this.oficinasListado.splice(codigo,1)
   }
 
 }

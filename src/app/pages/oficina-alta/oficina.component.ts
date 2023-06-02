@@ -35,7 +35,6 @@ export class OficinaComponent {
     )
     this.sweetAlertService.creacionOficina("Oficina creada", "Se ha creado una nueva oficina", "success")
     this.router.navigate(["oficinas-listado"])
-
   }
 
 }
