@@ -9,8 +9,8 @@ export const vehiculos: any[] = [
     {
         codigo: 2,
         grupo: "C",
-        marca: "Chevrolet",
-        modelo: "Carmaro",
+        marca: "Renault",
+        modelo: "Kwid",
         ano: "2022"
     }
 

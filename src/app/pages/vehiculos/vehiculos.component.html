@@ -21,10 +21,10 @@
         <td scope="col">{{vehiculo.modelo}}</td>
         <td scope="col">{{vehiculo.ano}}</td>
         <td class="acciones">
-          <a href="/vehiculo-alta"><button class="button-editar">
+          <a [routerLink]="['/vehiculo-alta']" [queryParams]="{codigo:vehiculo.codigo}"><button class="button-editar">
             Editar
           </button></a>
-          <div><button class="button-editar">
+          <div><button  (click)="removeVehiculo(vehiculo)" class="button-editar">
             Eliminar
           </button></div>
       </td>
@@ -34,4 +34,4 @@
   </table>
 
 
-<a href="/vehiculo-alta "><button>Agregar Vehiculo</button></a>
+<a [routerLink]="['/vehiculo-alta']"><button>Agregar Vehiculo</button></a>

@@ -1,34 +1,34 @@
 <h2 class="titulo">Vehiculo:</h2>
 
 <label for="grupo">Grupo</label>
-<select name="grupo" id="grupo">
-    <option value="1">A</option>
-    <option value="2">B</option>
-    <option value="3">C</option>
-    <option value="4">D</option>
-    <option value="5">E</option>
-    <option value="6">F</option>
-    <option value="7">G</option>
+<select [(ngModel)]="currentVehiculo.grupo"  name="grupo" id="grupo">
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="F">F</option>
+    <option value="G">G</option>
 </select>
 
-<label for="marca">Modelo</label>
-<select name="marca" id="marca">
-    <option value="1">Ford</option>
-    <option value="2">Renault</option>
-    <option value="3">Audi</option>
+<label for="marca">Marca</label>
+<select [(ngModel)]="currentVehiculo.marca" name="marca" id="marca">
+    <option value="Ford">Ford</option>
+    <option value="Renault">Renault</option>
+    <option value="Audi">Audi</option>
 </select>
 
 <label for="modelo">Modelo</label>
-<select name="modelo" id="modelo">
-    <option value="1">Fiesta</option>
-    <option value="2">Kwid</option>
-    <option value="3">A4</option>
+<select [(ngModel)]="currentVehiculo.modelo"  name="modelo" id="modelo">
+    <option value="Fiesta">Fiesta</option>
+    <option value="Kwid">Kwid</option>
+    <option value="A4">A4</option>
 </select>
 
 <label for="ano">Año</label>
-<input type="text" name="ano"  id="">
+<input  [(ngModel)]="currentVehiculo.ano"  type="text" name="ano"  id="" >
 
-<a href="/vehiculos-listado"><button>Guardar</button></a>
+<button (click)="saveVehiculos()">Guardar</button>
 
 
 

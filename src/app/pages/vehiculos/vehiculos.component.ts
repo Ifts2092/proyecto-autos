@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { vehiculos } from './vehiculos';
+import { VehiculoService } from 'src/app/service/vehiculo.service';
 
 @Component({
   selector: 'app-vehiculos',
@@ -7,5 +7,14 @@ import { vehiculos } from './vehiculos';
   styleUrls: ['./vehiculos.component.scss']
 })
 export class VehiculosComponent {
-  vehiculos: any[] = vehiculos
+  vehiculos: any[] = [];
+
+  constructor(private service:VehiculoService){
+    this.vehiculos = service.getList();
+  }
+
+  removeVehiculo(vehiculo:any){
+    this.service.removeElement(vehiculo);
+  }
+
 }
