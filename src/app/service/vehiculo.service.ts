@@ -40,7 +40,7 @@ export class VehiculoService {
 
   removeElement(element: any){
     var foundIndex = this.list.findIndex(x => x.codigo == element.codigo);
-    this.list.splice(foundIndex);
+    this.list.splice(foundIndex,1);
   }
 
 }
