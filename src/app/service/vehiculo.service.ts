@@ -34,7 +34,11 @@ export class VehiculoService {
   }
 
   addElement(element: any){
-    element.codigo = this.list[this.list.length-1].codigo + 1;
+    if(this.list.length)
+      element.codigo = this.list[this.list.length-1].codigo + 1;
+    else
+      element.codigo = 1;
+      
     this.list.push(element)
   }
 
