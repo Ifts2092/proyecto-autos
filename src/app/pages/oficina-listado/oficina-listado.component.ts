@@ -17,7 +17,7 @@ export class OficinaListadoComponent {
 
 
   removeOfficeConfirm(vehiculo:any){
-    // let deleteOffice = false
+    // var deleteOffice = false
     // this.sweetAlertService.sweetConfirm("Estas seguro de eliminar esta oficina?","No podras revertir esta accion!",deleteOffice)
     // if(deleteOffice){
       this.oficina.removeElement(vehiculo);

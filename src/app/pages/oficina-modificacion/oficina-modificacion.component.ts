@@ -9,7 +9,6 @@ import { OficinaService } from 'src/app/service/oficina.service';
 })
 export class OficinaModificacionComponent {
 
-  @Input() oficina: any;
 
   office: any = {
     codigo: undefined,
