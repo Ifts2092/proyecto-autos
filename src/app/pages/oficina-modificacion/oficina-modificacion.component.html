@@ -1,13 +1,13 @@
-<h2 class="titulo">Oficina:</h2>
+<h2 class="titulo">Editar Oficina</h2>
 <form>
 
     <!-- Grid -->
     <div class="grid">
-      <h3>Oficina numero: 3</h3>
+      <h3>Oficina codigo: {{codigoOffice}}</h3>
       <!-- Markup example 1: input is inside label -->
       <label for="firstname">
         Ciudad de oficina: 
-        <input type="text" id="ciudadoficina" name="ciudadoficina" placeholder="Caba" [(ngModel)]="oficina.ciudad" required>
+        <input type="text" id="ciudadoficina" name="ciudadoficina" placeholder="CABA" [(ngModel)]="oficina.ciudad" required>
       </label>
   
       <label for="lastname">
@@ -33,6 +33,6 @@
     </div>
   
     <!-- Button -->
-    <button type="submit" (click)="editarInfo()">Guardar</button>
+    <button type="submit" (click)="saveOficinas()">Guardar</button>
   
   </form>

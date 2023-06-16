@@ -13,19 +13,19 @@
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let ofice of oficinasListado">
-            <td scope="col">{{ofice.codigo}}</td>
-            <td scope="col">{{ofice.ciudad}}</td>
-            <td scope="col">{{ofice.calle}}</td>
-            <td scope="col">{{ofice.numero}}</td>
-            <td scope="col">{{ofice.codigoPostal}}</td>
-            <td scope="col">{{ofice.telefono}}</td>
+        <tr *ngFor="let office of oficinasListado">
+            <td scope="col">{{office.codigo}}</td>
+            <td scope="col">{{office.ciudad}}</td>
+            <td scope="col">{{office.calle}}</td>
+            <td scope="col">{{office.numero}}</td>
+            <td scope="col">{{office.codigoPostal}}</td>
+            <td scope="col">{{office.telefono}}</td>
             <td class="acciones">
-                <a href="/oficina-modificacion/ofice.id"><button class="button-editar">
+                <a routerLink="/oficina-modificacion" [queryParams]="{codigo:office.codigo}"><button class="button-editar">
                   Editar
                 </button></a>
                 <div>
-                  <button class="button-editar" (click)="eliminarOficina(ofice.codigo)">
+                  <button class="button-editar" (click)="removeOfficeConfirm(office)">
                   Eliminar
                 </button>
               </div>

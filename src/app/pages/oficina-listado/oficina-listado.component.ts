@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { oficinas } from './oficinas';
-import { AgregarInfoService } from 'src/app/service/agregar-info.service';
+import { OficinaService } from 'src/app/service/oficina.service';
+import { SweetAlertService } from 'src/app/service/sweet-alert.service';
 
 @Component({
   selector: 'app-oficina-listado',
@@ -11,21 +11,18 @@ export class OficinaListadoComponent {
 
   oficinasListado: any[];
 
-  constructor(private agregarService: AgregarInfoService){
-    this.oficinasListado = oficinas
+  constructor(private oficina: OficinaService,private sweetAlertService: SweetAlertService){
+    this.oficinasListado = oficina.getList();
   }
 
-  ngOnInit(){
 
-    if(this.agregarService.getInfo() != undefined){
-      oficinas.push(this.agregarService.getInfo())
-    }
-
+  removeOfficeConfirm(vehiculo:any){
+    // let deleteOffice = false
+    // this.sweetAlertService.sweetConfirm("Estas seguro de eliminar esta oficina?","No podras revertir esta accion!",deleteOffice)
+    // if(deleteOffice){
+      this.oficina.removeElement(vehiculo);
+    // }
   }
 
-  eliminarOficina(codigo: any){
-    // const oficina = this.oficinasListado.find(element => element.codigo === codigo);
-    this.oficinasListado.splice(codigo,1)
-  }
 
 }
