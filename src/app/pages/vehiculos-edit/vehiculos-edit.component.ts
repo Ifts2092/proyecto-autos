@@ -18,7 +18,7 @@ export class VehiculosEditComponent {
   };
 
   constructor(private router : Router, private route: ActivatedRoute, private service:VehiculoService) {
-    const codigo: string = this.route.snapshot.queryParams['codigo'];
+    const codigo: string = route.snapshot.queryParams['codigo'];
     var data = service.getElementByCodigo(codigo);
     if(data){
       this.currentVehiculo = data;

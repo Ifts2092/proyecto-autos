@@ -23,7 +23,7 @@
 
       <label for="lastname">
         Codigo postal: 
-        <input type="text" id="codigopostal" name="codigopostal" placeholder="Codigo postal..." [(ngModel)]="oficina.codigopostal" required>
+        <input type="text" id="codigopostal" name="codigopostal" placeholder="Codigo postal..." [(ngModel)]="oficina.codigoPostal" required>
       </label>
 
       <label for="lastname">
@@ -34,7 +34,7 @@
     </div>
   
     <!-- Button -->
-        <a href="/oficina-listado" (click)="agregarOficina()"><button>Guardar</button></a>
+        <button  (click)="agregarOficina()" >Guardar</button>
 
   
   </form>

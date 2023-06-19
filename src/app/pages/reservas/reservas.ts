@@ -1,16 +1,16 @@
 export const reservas: any[] = [
     {
         codigo: 1,
-        auto: "Fiesta",
-        cliente: "Pedro",
+        auto: "Ford Fiesta 2000",
+        cliente: "Pedro Perez",
         dias: 15,
         seguro: "B",
         precio: 30000
     },
     {
         codigo: 2,
-        auto: "Clio",
-        cliente: "Juan",
+        auto: "Renault Clio 2002",
+        cliente: "Juan Rodriguez",
         dias: 25,
         seguro: "A",
         precio: 20000

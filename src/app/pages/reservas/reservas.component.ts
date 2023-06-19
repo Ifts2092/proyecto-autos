@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { reservas } from './reservas';
+import { ReservaService } from 'src/app/service/reserva.service';
 
 @Component({
   selector: 'app-reservas',
@@ -9,4 +10,14 @@ import { reservas } from './reservas';
 export class ReservasComponent {
 
   reservas: any[] = reservas
+
+  constructor(private service:ReservaService){
+    this.reservas = service.getList();
+  }
+
+
+  removeReserva(reserva:any){
+    this.service.removeElement(reserva);
+  }
+
 }

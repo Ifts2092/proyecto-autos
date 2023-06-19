@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { oficinas } from '../oficina-listado/oficinas';
 import { AgregarInfoService } from 'src/app/service/agregar-info.service';
 import { SweetAlertService } from 'src/app/service/sweet-alert.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { OficinaService } from 'src/app/service/oficina.service';
 
 @Component({
@@ -12,26 +12,18 @@ import { OficinaService } from 'src/app/service/oficina.service';
 })
 export class OficinaComponent {
 
-  oficina: any = {
-    codigo: oficinas.length + 1,
-    ciudad: undefined,
-    calle: undefined,
-    numero: 0,
-    codigoPostal: 0,
-    telefono: 0
-  }
+  oficina: any = {}
 
-  constructor(
-    private oficinaService: OficinaService,
-    private sweetAlertService: SweetAlertService,
-    private router: Router
-    ){
-
+  constructor(private route: ActivatedRoute, private router: Router,private service: OficinaService){
+      const codigo: string = this.route.snapshot.queryParams['codigo'];
+      var data = service.getElementByCodigo(codigo);
+      if(data){
+        this.oficina = data;
+      }
   }
 
   agregarOficina(){
-    this.oficinaService.addElement(this.oficina)
-    this.sweetAlertService.creacionOficina("Oficina creada", "Se ha creado una nueva oficina", "success")
+    this.service.addElement(this.oficina)
     this.router.navigate(["oficinas-listado"])
   }
 

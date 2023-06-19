@@ -25,10 +25,10 @@
                 <div><button class="button-editar">
                     Alta Alquiler
                 </button></div>
-                <a href="/reserva-alta"><button class="button-editar">
+                <a [routerLink]="['/reserva-alta']" [queryParams]="{codigo:reserva.codigo}" ><button class="button-editar">
                     Editar
                 </button></a>
-                <div><button class="button-editar">
+                <div><button (click)="removeReserva(reserva)" class="button-editar">
                     Eliminar
                 </button></div>
             </td>
@@ -37,4 +37,4 @@
   </table>
 
 
-<a href="/reserva-alta"><button>Agregar Reservas</button></a>
+<a [routerLink]="['/reserva-alta']"><button>Agregar Reservas</button></a>

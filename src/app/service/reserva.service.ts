@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { vehiculos } from '../pages/vehiculos/vehiculos';
+import { reservas } from '../pages/reservas/reservas';
 import { BaseService } from './base.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class VehiculoService extends BaseService {
+export class ReservaService extends BaseService {
   
   constructor(){
     super();
-    this.list = vehiculos;
+    this.list = reservas;
   }
   
 }

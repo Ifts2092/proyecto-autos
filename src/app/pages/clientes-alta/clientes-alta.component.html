@@ -8,42 +8,37 @@
       <!-- Markup example 1: input is inside label -->
       <label for="firstname">
         Nombre: 
-        <input type="text" id="nombreCliente" name="cliente" placeholder="Nombre..." required>
+        <input type="text" id="nombreCliente" name="cliente" placeholder="Nombre..."  [(ngModel)]="cliente.nombre" required>
       </label>
   
-      <label for="lastname">
+      <label for="apellido">
         Calle: 
-        <input type="text" id="calle" name="calle" placeholder="Calle..." required>
+        <input type="text" id="apellido" name="apellido" placeholder="Apellido..."  [(ngModel)]="cliente.apellido" required>
       </label>
 
-      <label for="lastname">
-        Numero: 
-        <input type="text" id="numero" name="numero" placeholder="Numero..." required>
-      </label>
-
-      <label for="lastname">
+      <label for="dni">
         DNI: 
-        <input type="text" id="numero" name="dni" placeholder="DNI..." required>
+        <input type="text" id="numero" name="dni" placeholder="DNI..."  [(ngModel)]="cliente.dni" required>
       </label>
 
-      <label for="lastname">
+      <label for="direccion">
         Codigo postal: 
-        <input type="text" id="codigopostal" name="codigopostal" placeholder="Codigo postal..." required>
+        <input type="text" id="direccion" name="direccion" placeholder="Codigo postal..."  [(ngModel)]="cliente.direccion" required>
       </label>
 
-      <label for="lastname">
+      <label for="telefono">
         Telefono: 
-        <input type="text" id="telefono" name="telefono" placeholder="Telefono..." required>
+        <input type="text" id="telefono" name="telefono" placeholder="Telefono..."  [(ngModel)]="cliente.telefono" required>
       </label>
 
-      <label for="lastname">
+      <label for="tarjeta">
         N° de Tarjeta: 
-        <input type="text" id="tarjeta" name="tarjeta" placeholder="Tarjeta..." required>
+        <input type="text" id="tarjeta" name="tarjeta" placeholder="Tarjeta..."  [(ngModel)]="cliente.tarjeta" required>
       </label>
   
     </div>
   
     <!-- Button -->
-    <a href="/clientes-listado"><button>Guardar</button></a>
+    <button (click)="saveCliente()">Guardar</button>
   
   </form>

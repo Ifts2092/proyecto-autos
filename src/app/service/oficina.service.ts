@@ -1,49 +1,15 @@
 import { Injectable } from '@angular/core';
 import { oficinas } from '../pages/oficina-listado/oficinas';
+import { BaseService } from './base.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class OficinaService {
-
-
-  list;
+export class OficinaService extends BaseService {
 
   constructor(){
+    super();
     this.list = oficinas;
   }
 
-  setList(val: any){
-    this.list = val;
-  }
-
-  getList(){
-    return this.list;
-  }
-
-  getElementByCodigo(codigo: any){
-      var data = this.list.find(x => x.codigo == codigo);
-      //return  Object.assign({},data); 
-      ////  es lo mismo que lo de abajo es para hacer una copia que este desconectada del array
-      return { ...data}
-  }
-  
-  setElementByCodigo(element: any){
-    var foundIndex = this.list.findIndex(x => x.codigo == element.codigo);
-    this.list[foundIndex] = element;
-  }
-
-  addElement(element: any){
-    if(this.list.length)
-      element.codigo = this.list[this.list.length-1].codigo + 1;
-    else
-      element.codigo = 1;
-      
-    this.list.push(element)
-  }
-
-  removeElement(element: any){
-    var foundIndex = this.list.findIndex(x => x.codigo == element.codigo);
-    this.list.splice(foundIndex,1);
-  }
 }

@@ -21,11 +21,11 @@
             <td scope="col">{{office.codigoPostal}}</td>
             <td scope="col">{{office.telefono}}</td>
             <td class="acciones">
-                <a routerLink="/oficina-modificacion" [queryParams]="{codigo:office.codigo}"><button class="button-editar">
+                <a routerLink="/oficina-alta" [queryParams]="{codigo:office.codigo}"><button class="button-editar">
                   Editar
                 </button></a>
                 <div>
-                  <button class="button-editar" (click)="removeOfficeConfirm(office)">
+                  <button class="button-editar" (click)="removeOffice(office)">
                   Eliminar
                 </button>
               </div>
@@ -34,4 +34,4 @@
     </tbody>
 </table>
 
-<a href="/oficina-alta"><button>Agregar Oficina</button></a>
+<a [routerLink]="['/oficina-alta']" ><button>Agregar Oficina</button></a>

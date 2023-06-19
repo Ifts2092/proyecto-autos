@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { clientes } from './cliente';
+import { ClienteService } from 'src/app/service/clientes.service';
 
 
 @Component({
@@ -8,6 +8,15 @@ import { clientes } from './cliente';
   styleUrls: ['./clientes-listado.component.scss']
 })
 export class ClientesListadoComponent {
-  clientes: any[] = clientes
+  clientes: any[];
+
+  
+  constructor(private service:ClienteService){
+    this.clientes = service.getList();
+  }
+
+  removeCliente(cliente:any){
+    this.service.removeElement(cliente);
+  }
 
 }
