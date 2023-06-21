@@ -1,5 +1,15 @@
 <h2 class="titulo">Listado de oficinas</h2>
 
+<label for="busqueda">Buscar por:</label>
+<select id="busqueda" [(ngModel)]="filtrarPor">
+  <option value="ciudad" selected>Ciudad</option>
+  <option value="calle">Calle</option>
+</select>
+
+<label for="ciudadOficina">
+  <input type="text" id="ciudadOficina" name="filtroOficina" placeholder="Buscar..." [(ngModel)]="filtroOficina" required>
+</label>
+
 <table>
     <thead>
       <tr>
@@ -13,7 +23,7 @@
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let office of oficinasListado">
+        <tr *ngFor="let office of oficinasListado | filtro:filtroOficina:filtrarPor">
             <td scope="col">{{office.codigo}}</td>
             <td scope="col">{{office.ciudad}}</td>
             <td scope="col">{{office.calle}}</td>

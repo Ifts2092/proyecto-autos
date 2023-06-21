@@ -1,5 +1,15 @@
 <h2 class="titulo">Listado de vehiculos</h2>
 
+<label for="busqueda">Buscar por:</label>
+<select id="busqueda" [(ngModel)]="filtrarPor">
+  <option value="grupo" selected>Grupo</option>
+  <option value="marca">Marca</option>
+  <option value="modelo">Modelo</option>
+</select>
+
+<label for="ciudadoficina">
+  <input type="text" id="ciudadoficina" name="filtroVehiculo" placeholder="Buscar..." [(ngModel)]="filtroVehiculo" required>
+</label>
 
 <table>
     <thead>
@@ -14,7 +24,7 @@
     </thead>
     <tbody>
 
-      <tr *ngFor="let vehiculo of vehiculos">
+      <tr *ngFor="let vehiculo of vehiculos | filtro:filtroVehiculo:filtrarPor">
         <td scope="col">{{vehiculo.codigo}}</td>
         <td scope="col">{{vehiculo.grupo}}</td>
         <td scope="col">{{vehiculo.marca}}</td>

@@ -9,6 +9,8 @@ import { SweetAlertService } from 'src/app/service/sweet-alert.service';
 })
 export class OficinaListadoComponent {
 
+  filtroOficina = "";
+  filtrarPor: string | undefined;
   oficinasListado: any[];
 
   constructor(private oficina: OficinaService,private sweetAlertService: SweetAlertService){
@@ -19,6 +21,7 @@ export class OficinaListadoComponent {
   removeOffice(office:any){
       this.oficina.removeElement(office);
   }
+
 
 
 }

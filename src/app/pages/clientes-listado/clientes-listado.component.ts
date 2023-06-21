@@ -8,9 +8,12 @@ import { ClienteService } from 'src/app/service/clientes.service';
   styleUrls: ['./clientes-listado.component.scss']
 })
 export class ClientesListadoComponent {
+
+  filtroCliente = "";
+  filtrarPor: string | undefined;
+
   clientes: any[];
 
-  
   constructor(private service:ClienteService){
     this.clientes = service.getList();
   }

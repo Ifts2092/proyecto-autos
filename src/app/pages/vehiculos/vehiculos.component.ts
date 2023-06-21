@@ -7,6 +7,8 @@ import { VehiculoService } from 'src/app/service/vehiculo.service';
   styleUrls: ['./vehiculos.component.scss']
 })
 export class VehiculosComponent {
+  filtroVehiculo = "";
+  filtrarPor: string | undefined;
   vehiculos: any[] = [];
 
   constructor(private service:VehiculoService){

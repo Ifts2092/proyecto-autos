@@ -1,5 +1,16 @@
 <h2 class="titulo">Listado de Clientes</h2>
 
+<label for="buscarPor">Buscar por:</label>
+<select id="buscarPor" [(ngModel)]="filtrarPor">
+  <option value="nombre" selected>Nombre</option>
+  <option value="apellido">Apellido</option>
+  <option value="direccion">Direccion</option>
+</select>
+
+<label for="busqueda">
+  <input type="text" id="busqueda" name="filtroCliente" placeholder="Buscar..." [(ngModel)]="filtroCliente" required>
+</label>
+
 <table>
     <thead>
       <tr>
@@ -15,7 +26,7 @@
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let cliente of clientes">
+        <tr *ngFor="let cliente of clientes | filtro:filtroCliente:filtrarPor">
             <td scope="col">{{cliente.codigo}}</td>
             <td scope="col">{{cliente.nombre}}</td>
             <td scope="col">{{cliente.apellido}}</td>

@@ -16,6 +16,7 @@ import { ReservasComponent } from './pages/reservas/reservas.component';
 import { ReservasEditComponent } from './pages/reservas-edit/reservas-edit.component';
 import { NabbarComponent } from './componentes/nabbar/nabbar.component';
 import { FormsModule } from '@angular/forms';
+import { FiltroPipe } from './pipes/filtro.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FormsModule } from '@angular/forms';
     ClientesListadoComponent,
     ReservasComponent,
     ReservasEditComponent,
-    NabbarComponent
+    NabbarComponent,
+    FiltroPipe
   ],
   imports: [
     BrowserModule,

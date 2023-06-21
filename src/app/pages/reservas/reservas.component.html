@@ -1,5 +1,15 @@
 <h2 class="titulo">Listado de reservas</h2>
 
+<label for="busqueda">Buscar por:</label>
+<select id="busqueda" [(ngModel)]="filtrarPor">
+  <option value="auto" selected>Auto</option>
+  <option value="cliente">Cliente</option>
+</select>
+
+<label for="ciudadOficina">
+    <input type="text" id="ciudadOficina" name="filtroOficina" placeholder="Buscar..." [(ngModel)]="filtroReserva" required>
+</label>
+
 <table>
     <thead>
       <tr>
@@ -13,7 +23,7 @@
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let reserva of reservas">
+        <tr *ngFor="let reserva of reservas | filtro:filtroReserva:filtrarPor">
             <td scope="col">{{reserva.codigo}}</td>
             <td scope="col">{{reserva.auto}}</td>
             <td scope="col">{{reserva.cliente}}</td>

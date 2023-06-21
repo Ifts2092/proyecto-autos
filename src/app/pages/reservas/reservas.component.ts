@@ -9,6 +9,9 @@ import { ReservaService } from 'src/app/service/reserva.service';
 })
 export class ReservasComponent {
 
+  filtroReserva = "";
+  filtrarPor: string | undefined;
+
   reservas: any[] = reservas
 
   constructor(private service:ReservaService){
